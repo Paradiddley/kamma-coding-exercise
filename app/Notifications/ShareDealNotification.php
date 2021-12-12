@@ -36,7 +36,7 @@ class ShareDealNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line("Look at this deal {$this->dealShare->sender_name} sent you!")
-                    ->action('Go to deal', route('part.two'));
+            ->line("Look at this deal {$this->dealShare->sender_name} sent you!")
+            ->action('Go to deal', route('part.two'));
     }
 }

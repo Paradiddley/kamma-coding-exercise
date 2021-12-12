@@ -10,18 +10,18 @@ module.exports = {
             serif: ['Merriweather', 'serif'],
         },
         extend: {
-            typography: {
+            typography: (theme) => ({
                 DEFAULT: {
                     css: {
                         p: {
                             color: 'black',
+                            "> a": {
+                                color: theme('colors.pink.600')
+                            }
                         },
-                        a: {
-                            color: 'text-pink-600'
-                        }
                     },
                 },
-            },
+            }),
         },
     },
     plugins: [

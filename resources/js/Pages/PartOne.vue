@@ -18,7 +18,7 @@
                     id, placerat ut nisl. Donec vehicula tellus ut lorem ultricies tristique. Morbi luctus velit vel
                     feugiat semper. Cras enim quam, porttitor sit amet orci vel, suscipit mattis turpis. Vivamus cursus
                     est eget tortor venenatis tempor. Suspendisse potenti. We're hiring at the moment, to find out more
-                    <Link class="text-pink-600" href="#">click here</Link>.</p>
+                    <Link href="#">click here</Link>.</p>
                 <p>Nullam neque augue, pretium non orci eget, ullamcorper commodo elit. Sed vitae magna quis libero
                     malesuada interdum id vitae sapien. Sed convallis tortor et eros pulvinar, ac malesuada magna
                     efficitur. Maecenas congue tempus mattis. Praesent rhoncus, lacus et ultricies mollis, tortor sapien
