@@ -6,7 +6,7 @@
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet"/>
         <script src="{{ mix('/js/app.js') }}" defer></script>
     </head>
-    <body class="max-w-screen-lg mx-auto bg-gray-100">
+    <body class="bg-gray-100">
         @inertia
     </body>
 </html>

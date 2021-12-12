@@ -1,5 +1,5 @@
 <template>
-    <main class="px-2 lg:px-0">
+    <main class="max-w-screen-lg mx-auto px-2 lg:px-0">
         <header>
             <nav class="flex flex-col py-6">
                 <div class="flex justify-end">

@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+
+Route::inertia('/part-one', 'PartOne');
+
+Route::prefix('/part-two')->group(function () {
+    Route::inertia('/', 'PartTwo')->name('part.two');
+    Route::post('/submit', \App\Actions\SubmitShareDealForm::class);
 });
-
-Route::get('/part-one', \App\Http\Controllers\PartOneController::class);
-
-Route::get('/part-two', \App\Http\Controllers\PartTwoController::class);
