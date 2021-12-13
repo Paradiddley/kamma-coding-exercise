@@ -58,4 +58,5 @@ Use `./vendor/bin/sail test` to run all tests.
 * Implement front-end tests.
 * Reset form after submission.
 * Prettier error page.
+* GitHub Actions CI to run tests
 * I ideally wanted queue emails being sent, but it's within a database transaction. I wanted to make sure the email was sent successfully before saving the record.
