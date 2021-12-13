@@ -1,15 +1,15 @@
 <template>
-    <Head title="Part 2"></Head>
+    <Head title="Part 2" />
     <Layout>
         <Card
             header="Send to a friend"
-            sub-header="Share this great deal with friends!"
         >
+            <p class="text-gray-400 mb-4">Share this great deal with friends!</p>
             <flash-message />
             <div class="w-full md:w-10/12 md:mx-auto">
                 <form class="flex flex-col gap-4" @submit.prevent="submit">
                     <div class="flex items-center">
-                        <div class="mb-1 mb-0 w-1/3">
+                        <div class="pr-5 w-1/3 text-right">
                             <label class="font-bold">Your name * </label>
                         </div>
                         <div class="w-2/3 md:flex-grow">
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="flex items-center">
-                        <div class="mb-1 mb-0 w-1/3">
+                        <div class="pr-5 w-1/3 text-right">
                             <label class="font-bold">Friend's name * </label>
                         </div>
                         <div class="w-2/3 md:flex-grow">
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="flex items-center">
-                        <div class="mb-1 mb-0 w-1/3">
+                        <div class="pr-5 w-1/3 text-right">
                             <label class="font-bold">Friend's email * </label>
                         </div>
                         <div class="w-2/3 md:flex-grow">
@@ -38,8 +38,12 @@
                         </div>
                     </div>
 
-                    <div class="flex justify-end">
-                        <button class="border rounded bg-gray-300 uppercase text-xs p-2" type="submit">submit</button>
+                    <div class="flex justify-start">
+                        <div class="w-1/3"></div>
+                        <div class="w-2/3 inline-flex items-center">
+                            <svg class="bg-green-700  h-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M13.293 7.293a.999.999 0 0 0 0 1.414L15.586 11H8a1 1 0 0 0 0 2h7.586l-2.293 2.293a.999.999 0 1 0 1.414 1.414L19.414 12l-4.707-4.707a.999.999 0 0 0-1.414 0z" fill="#fff"/></svg>
+                            <button class="uppercase text-sm p-2" type="submit">submit</button>
+                        </div>
                     </div>
                 </form>
             </div>

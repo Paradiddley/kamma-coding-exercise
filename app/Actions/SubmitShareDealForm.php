@@ -5,6 +5,7 @@ namespace App\Actions;
 use App\Models\DealShare;
 use App\Notifications\ShareDealNotification;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Redirect;
@@ -22,10 +23,11 @@ class SubmitShareDealForm
     public function handle(array $attributes): void
     {
         DB::transaction(function () use ($attributes) {
-            $sharedDeal = new DealShare($attributes);
+            $sharedDeal = App::make(DealShare::class);
+            $sharedDeal->fill($attributes);
             $sharedDeal->save();
 
-            Notification::route('mail', [$sharedDeal->recipient_email => $sharedDeal->recipient_name])
+            Notification::route('mail', [$attributes['recipient_email'] => $attributes['recipient_name']])
                 ->notify(new ShareDealNotification($sharedDeal));
         });
     }
@@ -60,11 +62,7 @@ class SubmitShareDealForm
      */
     public function asController(ActionRequest $request): RedirectResponse
     {
-        try {
-            $this->handle($request->validated());
-        } catch (\Exception $e) {
-            return Redirect::back()->with('error', 'Notification failed to send');
-        }
+        $this->handle($request->validated());
 
         return Redirect::back()->with('message', 'Notification sent');
     }

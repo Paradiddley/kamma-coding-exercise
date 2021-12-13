@@ -1,5 +1,5 @@
 <template>
-    <Head title="Part 1"></Head>
+    <Head title="Part 1" />
     <Layout>
         <Card
             header="Kamma Holding Text"

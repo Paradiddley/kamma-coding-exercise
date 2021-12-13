@@ -1,0 +1,9 @@
+.bg-pattern {
+    background: repeating-linear-gradient(
+        -45deg,
+        #fdfdfd,
+        #fdfdfd 3px,
+        #f6f6f6 3px,
+        #f6f6f6 6px
+    );
+}
