@@ -51,10 +51,11 @@ If (god forbid) there's an error, and you wish to see the stacktrace, change `AP
 
 Use `./vendor/bin/sail test` to run all tests.
 
-## Improvements
+## Improvements/known caveats
 
 * To make form fields and button as reusable components. Even better would be a form builder component that would accept a JSON structure to build the form.
 * Better front-end error handling that switches output based on `APP_DEBUG`, so that it shows a 'pretty' message with debug off and exception/stack trace with debug on.
 * Implement front-end tests.
 * Reset form after submission.
 * Prettier error page.
+* I ideally wanted queue emails being sent, but it's within a database transaction. I wanted to make sure the email was sent successfully before saving the record.
